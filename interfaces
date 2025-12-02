@@ -1,12 +1,20 @@
 auto lo
 iface lo inet loopback
 
-auto enp0s1
-iface enp0s1 inet static
+# enp0s3 → Red iPhones (4.0.0.0/29)
+auto enp0s3
+iface enp0s3 inet static
     address 4.0.0.1
     netmask 255.255.255.248
 
-auto enp0s2
-iface enp0s2 inet static
+# enp0s8 → Cliente R0 (4.0.0.8/29)
+auto enp0s8
+iface enp0s8 inet static
+    address 4.0.0.9
+    netmask 255.255.255.248
+
+# enp0s9 → Enlace R0–R1 (192.168.0.0/30)
+auto enp0s9
+iface enp0s9 inet static
     address 192.168.0.1
     netmask 255.255.255.252
